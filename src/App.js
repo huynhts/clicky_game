@@ -7,29 +7,25 @@ import characters from "./characters.json";
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    characters,
-    score: 0
+    characters: characters,
+    score: 0,
+    topScore: 0,
+    maxScore: 12
   };
 
-  shuffleCharacter = function () {
+  shuffleCharacter = () => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
-    const characters = [];
+    this.setState({
+      characters: this.state.characters[Math.floor(Math.random() * this.state.characters.length)]
+    })
 
-    for (i = 0; i < this.state.characters.length; i++) {
-      let ranNum = Math.random() * (this.state.characters.length - 1) + 1;
-
-      characters.push(this.state.characters[ranNum])
-    }
 
     // Set this.state.friends equal to the new friends array
-    console.log(id);
-
-    this.setState({ characters });
-    console.log(characters);
   };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
+    console.log(characters);
     return (
       <Wrapper>
         <Title>Dragon Ball Z Pick Em</Title>
