@@ -10,32 +10,82 @@ class App extends Component {
     characters: characters,
     score: 0,
     topScore: 0,
-    maxScore: 12
+    maxScore: 12,
+    firstClick: true,
+    clickedChar: []
   };
 
-  shuffleCharacter = () => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    this.setState({
-      characters: this.state.characters[Math.floor(Math.random() * this.state.characters.length)]
-    })
+  shuffleCharacter = (array) => {
+    var currentIndex = array.length;
+    var temporaryValue;
+    var randIndex;
 
+    while (0 !== currentIndex) {
+      randIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
 
-    // Set this.state.friends equal to the new friends array
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randIndex];
+      array[randIndex] = temporaryValue;
+    }
+
+    return array;
   };
+
+  handleInitClick = (id) => {
+    console.log("clicked: " + id);
+    this.checkIfClicked(id);
+  }
+
+  checkIfClicked = (id) => {
+    const firstClick = this.state.firstClick;
+    const clickedChar = this.state.clickedChar;
+    console.log("Current Score:" + this.state.score);
+
+    if (firstClick) {
+      this.setState({
+        characters: this.shuffleCharacter(characters),
+        score: this.state.score + 1,
+        firstClick: false,
+        clickedChar: clickedChar.concat(id)
+      });
+    } else {
+      console.log(firstClick);
+      console.log(clickedChar);
+      for (let i = 0; i < clickedChar.length; i++) {
+        if (id === clickedChar[i]) {
+
+          this.setState({
+            characters: this.shuffleCharacter(characters),
+            score: 0,
+            clickedChar: [],
+            firstClick: true
+          });
+          console.log("YOU LOSE! reset score to:" + this.state.score);
+        } else {
+          this.setState({
+            characters: this.shuffleCharacter(characters),
+            score: this.state.score + 1,
+            clickedChar: clickedChar.concat(id)
+          });
+        }
+      }
+    };
+  }
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
-    console.log(characters);
     return (
       <Wrapper>
         <Title>Dragon Ball Z Pick Em</Title>
         {this.state.characters.map(characters => (
           <ClickCards
-            shuffleCharacter={this.shuffleCharacter}
+            handleInitClick={this.handleInitClick}
             id={characters.id}
             key={characters.id}
             name={characters.name}
             image={characters.image}
+            clicked={characters.clicked}
           />
         ))}
       </Wrapper>

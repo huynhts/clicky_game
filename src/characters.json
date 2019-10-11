@@ -2,61 +2,73 @@
   {
     "id": 1,
     "name": "Trunks",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/39164/1155596-untitled_1.png"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/39164/1155596-untitled_1.png",
+    "clicked": false
   },
   {
     "id": 2,
     "name": "Supreme Kai",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/0/5457/330095-supremekailookingdown.jpg"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/0/5457/330095-supremekailookingdown.jpg",
+    "clicked": false
   },
   {
     "id": 3,
     "name": "Shenron",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/2/23921/852536-shenron.jpg"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/2/23921/852536-shenron.jpg",
+    "clicked": false
   },
   {
     "id": 4,
     "name": "Piccolo",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/0/3009/910683-51.jpg"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/0/3009/910683-51.jpg",
+    "clicked": false
   },
   {
     "id": 5,
     "name": "Master Roshi",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/39164/1155590-untitled_1.png"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/39164/1155590-untitled_1.png",
+    "clicked": false
   },
   {
     "id": 6,
     "name": "King Kai",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/16/164924/2287823-2287822-kaio.png"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/16/164924/2287823-2287822-kaio.png",
+    "clicked": false
   },
   {
     "id": 7,
     "name": "Gotenks",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/39164/1155585-untitled_1.png"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/39164/1155585-untitled_1.png",
+    "clicked": false
   },
   {
     "id": 8,
     "name": "Goku",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/34651/1224179-0goku.jpg"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/34651/1224179-0goku.jpg",
+    "clicked": false
   },
   {
     "id": 9,
     "name": "Frieza",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/34651/1224176-0freeza.jpg"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/34651/1224176-0freeza.jpg",
+    "clicked": false
   },
   {
     "id": 10,
     "name": "Android 18",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/39164/1155589-untitled_1.png"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/3/39164/1155589-untitled_1.png",
+    "clicked": false
   },
   {
     "id": 11,
     "name": "Cooler",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/15/155548/2279440-cooler.png"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/15/155548/2279440-cooler.png",
+    "clicked": false
   },
   {
     "id": 12,
     "name": "Cell",
-    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/2/23697/814047-1099177892_kamehameha.jpg"
+    "image": "https://giantbomb1.cbsistatic.com/uploads/square_small/2/23697/814047-1099177892_kamehameha.jpg",
+    "clicked": false
   }
 ]
