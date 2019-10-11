@@ -41,6 +41,7 @@ class App extends Component {
     const firstClick = this.state.firstClick;
     const clickedChar = this.state.clickedChar;
     console.log("Current Score:" + this.state.score);
+    console.log(clickedChar);
 
     if (firstClick) {
       this.setState({
@@ -50,18 +51,15 @@ class App extends Component {
         clickedChar: clickedChar.concat(id)
       });
     } else {
-      console.log(firstClick);
-      console.log(clickedChar);
       for (let i = 0; i < clickedChar.length; i++) {
         if (id === clickedChar[i]) {
-
           this.setState({
             characters: this.shuffleCharacter(characters),
             score: 0,
             clickedChar: [],
             firstClick: true
           });
-          console.log("YOU LOSE! reset score to:" + this.state.score);
+          console.log("You Lose");
         } else {
           this.setState({
             characters: this.shuffleCharacter(characters),
@@ -72,6 +70,11 @@ class App extends Component {
       }
     };
   }
+
+  //add function to check for top score and reset game if top score hits. call in first click and if characters dont match
+  // checkScore = (score) => {
+
+  // }
 
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
